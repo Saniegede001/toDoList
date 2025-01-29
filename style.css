@@ -5,18 +5,21 @@
 }
 
 body {
+    min-height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: rgb(235, 235, 235);
+    background-color: #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #container {
     background-color: #fff;
-    max-width: 350px;
+    width: 350px;
     margin: auto;
-    margin-top: 100px;
     padding: 16px;
     border-radius: 8px;
-    box-shadow: 1px 1px 1px 1px rgb(226, 226, 226);
+    box-shadow: 2px 2px 2px 2px rgb(226, 226, 226);
 }
 
 h2 {
@@ -27,8 +30,7 @@ h2 {
     width: 100%;
     margin-top: 14px;
     padding: 6px 10px;
-    font-size: 16px;
-    /* outline: none; */
+    font-size: 20px;
     border: 1px solid grey;
     border-radius: 4px;
 
@@ -38,8 +40,8 @@ h2 {
 #addButton {
     background-color: #0000ff;
     color: #fff;
+    font-size: 16px;
     font-weight: 600;
-    /* margin: auto; */
     margin-top: 12px;
     padding: 10px;
     border: none;
@@ -50,23 +52,28 @@ h2 {
 }
 
 #addButton:hover {
-    background-color: #13ae11;
+    background-color: #1134a6;
 }
 
 #addButton:active {
-    background-color: #043303;
+    background-color: #0c106e;
 }
 
 li {
     list-style-type: none;
-    background-color: aliceblue;
+    background-color: #ebebeb;
     margin: 20px auto;
     padding: 12px;
-    font-size: 18px;
+    font-size: 20px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
 }
 
 #deleteButton {
@@ -87,3 +94,12 @@ li {
     color: black;
 }
 
+@media(max-width: 700px) {
+    body {
+        padding: 12px;
+    }
+
+    #container {
+        margin-top: 10px;
+    }
+}
