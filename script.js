@@ -1,4 +1,4 @@
-addButton.addEventListener('click', (e)=>{
+addButton.addEventListener('click', ()=>{
     const input = document.getElementById('input')
     const addButton = document.getElementById('addButton')
 
@@ -19,30 +19,19 @@ addButton.addEventListener('click', (e)=>{
     ` 
     taskList.appendChild(li)
 
+// Marking a Task as done
+    const completed = li.querySelector('span')
+    completed.addEventListener('click', ()=>{
+        completed.classList.toggle('completed')
+    })
+
 // deleting a task from the list
     const deleteButton = li.querySelector('#deleteButton')
 
-    deleteButton.addEventListener('click', (e)=>{
+    deleteButton.addEventListener('click', ()=>{
         taskList.removeChild(li)
     })
 
     input.value = ''
     
 })
-
-
-
-
-
-
-
-
-
-
-// const li = document.createElement('p')
-
-// li.id = 'mySani'
-// li.textContent = 'hey'
-
-// const container = document.getElementById('container')
-// container.appendChild(li)
